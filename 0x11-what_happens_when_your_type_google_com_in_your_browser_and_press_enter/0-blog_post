@@ -1,0 +1,45 @@
+Hey guys hope you feeling well 👋
+To day we will talk about " what happens when you type https://www.google.com in your browser and press Enter "
+Points we will cover:
+- DNS request
+- TCP/IP
+- Firewall
+- HTTPS/SSL
+- Load balancer
+- Web server
+- Application server
+- Database
+
+To know the all things happens we will start from scratch so‚ what is Server ?
+Server is a computer that provides a service for another computer known as Client‚ it could be a software like program or physical device and this architecture is called the client–server model.
+So what next ? DNS ?
+No‚ it's something before it internet phonebook‚ oh is this something exists !
+for sure yes‚ it's look like your phonebook but
+instead of phone number and person name there is the IP address and site domain but wait there is unknown words‚ what does IP address means and what that domain word !
+Calm down dude and take your breath
+In the real world you have your address whatever your country city street it is the same in the internet world you and any other site - server - clint has a none duplicated IP address that navigate the web bage from the server to you and the domain is just a human way to remember site like names in our world
+So the DNS is something which translate the URL into IP address making the browser reach his way to just making request and delivery the response to you‚ I just did it again what and you asking yourself what is the URL ?
+Don't get confused URL is the whole link that contains protocol + subdomain + secondary level domain+ top level domain + etc.
+But we didn't talk about TCP let's talk first about protocols.
+In the internet world protocols is a “system of rules that explain the correct conduct and procedures to be followed in formal situations” let's take example
+TCP (Transmission Control Protocol):
+It's a protocol that used for sending and getting data from the internet you used it every time you type something in your browser .
+UDP (Uaser Datagram Protocol):
+It's like the TCP but there is a small defiance in speed and works way.
+HTTP (Hypertext Transfer Protocol):
+This protocol responsible for making requests and responses from client to server.
+HTTPS (Hypertext Transfer Protocol Secure):
+Same as HTTP but have a sucre from SSL (Secure Socket Layer).
+
+So in this way sending request to the server by HTTP request and get the response our request in his way will find somethings in his way to the server like Firewall and Load balancer what they are ?
+Load balancer: is a program or hard drive that balance the load between the Servers yes the is a lot of Servers not just one and the number of servers depends on how much requests they get and how many requests can the single server handle.
+Moving to the next one Firewall:
+It can be as all things hard drive or just a program responsible for allowing the requests passing to the Load balancer it is secure layer to avoid attacks the make your Server down‚ his way depends on your configuration and your security rules.
+Your HTTP request finally reached the Server
+He will deal with the Web server and that Web server dealing with Application server‚ let’s talk about what those servers actually contain.
+Web server: Web pages and graph files
+Application server: Template pages‚ Code and Data
+What is the Database ?
+It’s a set of an organized collection of structured information or data stored electrically in a computer system
+So quick summary:
+When you type the URL and press Enter the browser gonna search on his DNS cache for the IP address of the domain you just entered if it unfounded there will be DNS request to get it from his book then the browser will send a HTTP request to that server by the IP address and waiting for the response in the HTTP request journey he will pass the Firewall then Load balancer and reach the server to get the data he wants and return back as response
