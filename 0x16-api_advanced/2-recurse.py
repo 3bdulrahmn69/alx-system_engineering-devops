@@ -18,7 +18,6 @@ def recurse(subreddit, hot_list=[] , after='', count=0):
     results = response.json().get('data')
     after = results.get('after')
     count += results.get('dist')
-    
     for child in results.get('children'):
         hot_list.append(child.get('data').get('title'))
 
