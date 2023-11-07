@@ -4,8 +4,10 @@
 """
 import requests
 
+
 def top_ten(subreddit):
-    """queries the Reddit API and prints the titles of the first 10 hot posts"""
+    """queries the Reddit API and prints the titles of the
+    first 10 hot posts"""
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {'User-Agent': 'linux:com.myapp:v.1 (by /u/aaorrico)'}
     params = {'limit': 10}
@@ -15,4 +17,5 @@ def top_ten(subreddit):
         print(None)
         return 0
     results = response.json().get('data')
-    [print(child.get('data').get('title')) for child in results.get('children')]
+    for child in results.get('children'):
+        print(child.get('data').get('title'))
